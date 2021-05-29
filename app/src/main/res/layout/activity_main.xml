@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/rlayout"
+        android:layout_marginBottom="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="359dp"
+        android:layout_height="451dp"
+        android:elevation="24dp"
+        android:id="@+id/rlayout"
+        android:layout_centerInParent="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rect"
+            android:alpha="0.4980392"/>
+
+
+        <TextView
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/showg"
+            android:text="Go"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/go"
+            android:layout_alignBaseline="@id/go"
+            android:textSize="18sp"
+            android:fontFamily="@font/showg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/explore"
+            android:layout_below="@+id/go"
+            android:fontFamily="@font/showg"
+            android:layout_centerHorizontal="true"
+            android:text="Explore..."
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user"
+            android:layout_below="@id/explore"
+            android:hint="Username"
+            android:drawablePadding="5dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pass"
+            android:background="@drawable/pass"
+            android:layout_below="@id/user"
+            android:layout_marginTop="15dp"
+            android:hint="Password"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/takeoff"
+            android:layout_below="@id/pass"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Take off!"
+            android:fontFamily="@font/showg"
+            android:textSize="18sp"
+            android:background="@drawable/takeoff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opttext"
+            android:layout_below="@id/takeoff"
+            android:layout_centerHorizontal="true"
+            android:text="or Sign in with"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/harlowsoliditalic"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/signopt"
+            android:layout_below="@+id/opttext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/google"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/fb"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/apple"
+                android:background="@android:color/transparent"
+                app:tint="@color/black" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/ms"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newacc"
+            android:layout_below="@id/signopt"
+            android:layout_centerHorizontal="true"
+            android:text="or Create New Account"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/harlowsoliditalic"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
